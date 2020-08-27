@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Ashik requested you to agree :)) </p>
+    <p id ="demo1">.............</p>
+    <script>
+        function fun() {
+            var c = confirm("Are You agred with me :))")
+            if(c == true){
+            document.getElementById("demo1").innerHTML=
+                "Thanks you are agreed";
+            }
+            else if(c == false){
+            document.getElementById("demo1").innerHTML=
+                "You are Hacked because you don't agreed with me ... heeeeh";
+            }
+        }
+    </script>
+    <button onclick="fun()">Trust Me</button>
+</body>
+
+</html>
+

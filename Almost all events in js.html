@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <script>
+        function change()
+        {
+            document.getElementById('p1').innerHTML="<p id=\"p1\" style=\"background-color: navajowhite\">\n" +
+                "        Page Loaded\n" +
+                "    </p>";
+        }
+        function change1()
+        {
+            document.getElementById('p2').innerHTML="<p id=\"p2\" style=\"background-color: orangered\">\n" +
+                "        Page Loaded\n" +
+                "    </p>";
+        }
+        function change2()
+        {
+            document.getElementById('p3').innerHTML="<p id=\"p3\" style=\"background-color: white\">\n" +
+                "        Page Loaded\n" +
+                "    </p>";
+        }
+
+        function reset()
+        {
+            document.getElementById('p1').innerHTML="<p id=\"p1\" style=\"background-color: aqua\">\n" +
+                "        There is something\n" +
+                "    </p>";
+            
+            document.getElementById('p2').innerHTML="<p id=\"p2\" style=\"background-color: aqua\">\n" +
+                "        There is something\n" +
+                "    </p>";
+
+            document.getElementById('p3').innerHTML="<p id=\"p3\" style=\"background-color: aqua\">\n" +
+                "        There is something\n" +
+                "    </p>";
+
+
+        }
+
+        function cheating()
+        {
+
+            alert("You pressed a key inside the input field");
+        }
+        function hack()
+        {
+            alert("Nasa Hacked successfully");
+        }
+    </script>
+    <p id="p1" style="background-color: aqua">
+        There is something
+    </p>
+
+    <p id="p2" style="background-color: aqua">
+        There is something
+    </p>
+
+    <p id="p3" style="background-color: aqua">
+        There is something
+    </p>
+    <div style="margin:10px;">
+        <button onmouseover="change()"> Mouse Over Me</button>
+        <button onmouseover="change1()"> Mouse Over Me</button>
+        <button onmouseover="change2()"> Mouse Over Me</button>
+        
+    </div>
+    <div style="margin:30px 50px;">
+        <button onclick="reset()">Click to Reset </button>
+    </div>
+
+    <div style="margin:30px 50px;">
+        <label> Input this </label>
+        <input type="text" onkeydown="cheating()">
+        <button onmouseout="hack()">Mouse out to  Hack NASA</button>
+    </div>
+   
+    </body>
+
+</html>

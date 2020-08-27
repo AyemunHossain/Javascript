@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<h2>JavaScript Methods</h2>
+<body>
+    <p id ="demo"></p>
+    <p id ="demo1">....</p>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits
+        function change() {
+
+            document.getElementById("demo1").innerHTML = "Sorted fruits list : "+fruits.sort()
+        }
+
+    </script>
+    <button onclick="change()"> See Students </button>
+
+</body>
+
+</html>

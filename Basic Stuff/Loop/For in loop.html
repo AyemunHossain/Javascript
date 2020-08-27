@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo"></p>
+    <p id ="demo1">....</p>
+    <script>
+
+        function change(){
+            var student = ["Ashik","Arif","Alif","Asif"];
+            var s="";
+            var text="";
+            for ( s in student){
+                text+=student[s]+" ";
+            }
+            document.getElementById("demo1").innerHTML=
+                text;
+        }
+    </script>
+    <button onclick="change()"> Show  </button>
+
+</body>
+
+</html>

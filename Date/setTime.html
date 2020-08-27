@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="001">......</p>
+    <script>
+        function fun() {
+            document.getElementById("001").innerHTML=
+                "You will Have a pop-up of <b>Google.com </b> <i>  after 5 seconds</i>";
+            setTimeout(function()
+                {
+                    open("https://www.google.com");
+                },5000);
+        }
+    </script>
+    <button onclick="this.style.display='none'; fun();">Google</button>
+</body>
+
+</html>
+

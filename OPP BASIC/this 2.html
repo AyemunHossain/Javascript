@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo"></p>
+    <p id ="demo1">.............</p>
+    <script>
+
+        document.getElementById("demo").innerHTML=
+            "Javascript is awesome!!!";
+        function repo() {
+            var person = {
+                fullName : function () {
+                    return this.firstName+ " "+this.lastName;
+                }
+            }
+            var student= {
+                firstName: "Ayemun",
+                lastName: "Hossain"
+            }
+            document.getElementById("demo1").innerHTML=
+                "The User Full Name : "+person.fullName.call(student);
+        }
+    </script>
+    <button onclick="repo()"> Show Name</button>
+
+</body>
+
+</html>

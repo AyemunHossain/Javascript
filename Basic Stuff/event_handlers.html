@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">----</p>
+    <p id ="demo1">....</p>
+    <script>
+
+        document.getElementById("demo").innerHTML=
+            "Javascript is awesome!!!";
+        function find() {
+            document.getElementById("demo1").innerHTML=
+                "Button Clicked";
+        }
+    </script>
+    <button onclick="find()"> Show  </button>
+    <button onclick="this.style.display='none'"> Click to Remove Me! </button>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id ="demo"></p>
+    <p id ="demo1">....</p>
+    <script>
+
+        function change() {
+            document.getElementById("demo1").innerHTML=
+            "MAX SAFE INTEGER  : "+Number.MAX_SAFE_INTEGER+"<br> <br>"+
+            "MIN SAFE INTEGER  : "+Number.MIN_SAFE_INTEGER+"<br> <br>"+
+            "MAX VALUE  : "+Number.MAX_VALUE+"<br> <br>"+
+            "MIN VALUE  : "+Number.MIN_VALUE+"<br> <br>"+
+            "POSITIVE INFINITY  : "+Number.POSITIVE_INFINITY+"<br> <br>"+
+            "NEGATIVE INFINITY  : "+Number.NEGATIVE_INFINITY+"<br> <br>";
+        }
+
+    </script>
+    <button onclick="change()"> See Formated </button>
+
+
+</body>
+
+</html>

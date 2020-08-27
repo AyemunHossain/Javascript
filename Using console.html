@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Student Information </p>
+    <p id ="demo1">.............</p>
+    <script>
+        class student{
+            constructor(name,id,dept,semster) {
+                this.name = name;
+                this.id = id;
+                this.dept = dept;
+                this.semester = semster;
+            }
+            allInfo(){
+                return "Name : "+this.name+"\n"+"ID : "+this.id+"\n"+"Department : "+this.dept+"\n"+"Semester : "+this.semester;
+            }
+        }
+        s1 = new student("Ashik",2408,"SWE","7th");
+
+        console.log(s1.allInfo());
+    </script>
+
+</body>
+
+</html>

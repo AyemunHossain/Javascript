@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <script>
+            function light(cmd) {
+                var pic;
+                if (cmd == 1){
+                    pic= "pic_bulbon.gif"
+                }
+                else if(cmd ==0){
+                    pic= "pic_bulboff.gif"
+                }
+                document.getElementById('light_pic').src = pic
+            }
+        </script>
+
+    <img id="light_pic" src="pic_bulboff.gif" width="100" hight = "180">
+    <p>
+        <button type="button" onclick="light(0)" > OFF</button>
+        <button type="button" onclick="light(1)" > ON</button>
+    </p>
+    </body>
+
+
+
+
+
+</html>

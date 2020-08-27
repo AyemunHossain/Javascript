@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Student Information </p>
+    <p id ="demo1">.............</p>
+    <script>
+         function st_info(f_name,l_name) {
+            this.f_name=f_name;
+            this.l_name=l_name;
+        }
+        st_info.prototype.full_name=function () {
+            return this.f_name+" "+this.l_name;
+        }
+
+
+        var st1 = new st_info("Ayemun","Hossain");
+        var st2 = new st_info("Rami","Malek");
+
+        document.getElementById("demo1").innerHTML=
+            "Student No: 1<br>"+st1.full_name()+"<br><br><br> Student NO: 2 <br>"+st2.full_name();
+
+    </script>
+
+</body>
+
+</html>

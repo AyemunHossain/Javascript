@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Student Information </p>
+    <p id ="demo1">.............</p>
+    <script>
+        class student{
+            constructor(name,id,dept,semster) {
+                this.name = name;
+                this.id = id;
+                this.dept = dept;
+                this.semester = semster;
+            }
+            allInfo(){
+                return "Name : "+this.name+"<br>"+"ID : "+this.id+"<br>"+"Department : "+this.dept+"<br>"+"Semester : "+this.semester;
+            }
+        }
+
+        class result extends student {
+
+            constructor(name,id,dept,semster,cgpa) {
+                super(name,id,dept,semster);
+                this.cgpa = cgpa;
+            }
+            result_info(){
+                return this.allInfo()+"<br>"+"Result : "+this.cgpa;
+            }
+
+        }
+
+
+
+
+        s1r = new result("Ashik",2408,"SWE","7th",3.33);
+
+        function repo() {
+            document.getElementById("demo1").innerHTML=
+                s1r.result_info();
+
+        }
+
+
+    </script>
+    <button onclick="repo()"> Show Name</button>
+
+</body>
+
+</html>

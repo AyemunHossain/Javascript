@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The example is contained some string method of javascript:</p>
+
+<p id="demo">I am the one baby baby</p>
+
+<script>
+function change() {
+    var str = document.getElementById("demo").innerText;
+    var ss = str.replace(/baby/g,"Sir")
+    document.getElementById("demo").innerText = ss;
+}
+</script>
+<button onclick="change()"> Try me</button>
+</body>
+</html>
+
+
+<!-- The g modifier is used to perform a global match (find all matches rather than stopping after the first match)-->

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The example is contained some string method of javascript:</p>
+
+<p id="demo">ashik asif alif</p>
+
+<script>
+function change(val) {
+    var str = document.getElementById("demo").innerText;
+    if(val == 1){
+        var ss = str.toLocaleUpperCase()
+    }
+    else if(val == 2){
+        var ss = str.toLocaleLowerCase()
+    }
+    document.getElementById("demo").innerText = ss;
+}
+</script>
+<button onclick="change(1)"> Uper Case </button>
+<button onclick="change(2)">Lower Case </button>
+</body>
+</html>

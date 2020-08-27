@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">----</p>
+    <p id ="demo1">....</p>
+    <script>
+
+        document.getElementById("demo").innerHTML=
+            "Javascript is awesome!!!";
+        function find() {
+            var index = document.getElementById("demo").innerHTML.search("awesome");
+            document.getElementById("demo1").innerHTML=
+                "awesome is on position : "+index;
+        }
+        function repo() {
+            var str = document.getElementById("demo").innerHTML;
+            var new_str = str.replace(/awesome/i,"Awesome");
+            document.getElementById("demo").innerHTML=
+            new_str;
+        }
+    </script>
+    <button onclick="find()"> Show  </button>
+    <button onclick="repo()"> Replace  </button>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<h2>JavaScript Methods</h2>
+<body>
+    <p id ="demo"></p>
+    <p id ="demo1">....</p>
+    <script>
+        var num = [10,15,1,2,14,158,18,198,11]
+        function change(){
+            document.getElementById("demo1").innerHTML =
+            "Even Number filtered : "+ num.filter(function (a){ if (a%2==0){ return a}})+"<br>"+
+            "Odd Number filtered : "+ num.filter(function (a){ if (a%2==1){ return a}})+"<br>"+
+            "Total sum (by reducing items) : "+ num.reduce(function (a,b){ return a+b })+"<br>";
+        }
+    </script>
+    <button onclick="change()"> See Students </button>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<h2 style= color:red>Login Here</h2>
+
+<script>
+    function fun() {
+    var name = document.login.name.value;
+    var password = document.login.password.value;
+    if(name == null || name==""){
+        alert("Name can't be blank");
+        return false;
+        }
+    else if (password.length<6){
+        alert("password must be at least 6 characters long");
+        return false;
+        }
+    }
+
+</script>
+
+    <form name="login" method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp"
+          onsubmit="return fun()">
+        Name: <input type="text" name="name"><br/>
+        Password: <input type="password" name="password"><br/>
+        <input type="submit" value="login">
+    </form>
+
+</body>
+</html>

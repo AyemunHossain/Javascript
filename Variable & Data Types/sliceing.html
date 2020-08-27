@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id ="demo"> </p>
+    <p id ="demo1">....</p>
+    <script>
+        var students = ["Ashik","Asif","Alif","Atif","Afif","Ariyan"];
+        document.getElementById("demo").innerHTML = "All Students : "+students.join(" , ");
+
+        function change() {
+            document.getElementById("demo1").innerHTML = "Slicing 0 to 3 : "+students.slice(0,3);
+      }
+    </script>
+    <button onclick="change()"> See Formated </button>
+
+</body>
+
+</html>

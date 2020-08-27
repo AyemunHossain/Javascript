@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>The example is contained valueof method of javascript:</p>
+    <p id ="demo"></p>
+    <p id ="demo1">....</p>
+    <script>
+        var f = 10.59698;
+
+        document.getElementById("demo").innerHTML = "The Original Float is : "+f;
+        function change() {
+            document.getElementById("demo1").innerHTML=
+            "The value : "+f.valueOf();
+        }
+    </script>
+    <button onclick="change()"> Number </button>
+
+
+</body>
+
+</html>

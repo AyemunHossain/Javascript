@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id ="demo"> </p>
+    <p id ="demo1">....</p>
+    <script>
+        var students = ["Ashik","Asif","Alif","Atif","Afif","Ariyan"];
+        document.getElementById("demo").innerHTML = "All Students : "+students.join(" , ");
+
+        function change() {
+            students.splice(students.length,0,"Akik","Amim")
+            document.getElementById("demo1").innerHTML = students.join(" , ");
+      }
+    </script>
+    <button onclick="change()"> See Formated </button>
+
+</body>
+
+</html>

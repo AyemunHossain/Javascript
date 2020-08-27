@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Student Information from : Static methods</p>
+    <p id ="demo1">.............</p>
+    <script>
+        class student{
+            constructor(name,id,dept,semster) {
+                this.name = name;
+                this.id = id;
+                this.dept = dept;
+                this.semester = semster;
+            }
+            //static method is connected wtih class, and you will need to call it by class name :)
+            static allInfo(obj){
+                return "Name : "+obj.name+"<br>"+"ID : "+obj.id+"<br>"+"Department : "+obj.dept+"<br>"+"Semester : "+obj.semester;
+            }
+        }
+        s1 = new student("Ashik",2408,"SWE","7th");
+
+        function repo() {
+            document.getElementById("demo1").innerHTML=
+                student.allInfo(s1);
+        }
+
+    </script>
+    <button onclick="repo()"> Show Name</button>
+
+</body>
+
+</html>

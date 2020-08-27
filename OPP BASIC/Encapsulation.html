@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Student Information </p>
+    <p id ="demo1">.............</p>
+    <script>
+         class test{
+             constructor() {
+                 var name;
+                 var id;
+             }
+             getName(){
+                 return this.name;
+             }
+             getId(){
+                 return this.id;
+             }
+             setName(name){
+                 this.name=name;
+             }
+             setId(id){
+                 this.id=id;
+             }
+
+         }
+    var obj1 = new test();
+         obj1.setId(9696);
+         obj1.setName("Rahim");
+         document.getElementById("demo1").innerHTML=
+             "encalpsulated data : <br><br><br>"+
+                 "ID: "+obj1.getId()+"<br>"+
+                 "Name: "+obj1.getName();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id ="d1"></p>
+    <p id ="d2"></p>
+    <p id ="demo1"></p>
+    <p id ="demo2"></p>
+    <script>
+        var f = 10.59698;
+        var f2 = 192;
+        document.getElementById("d1").innerHTML = "The Original Float is : "+f;
+        document.getElementById("d2").innerHTML = "The Original Integer is : "+f2;
+        function change() {
+            document.getElementById("demo1").innerHTML=
+            "The Integer value : "+parseInt(f)+"<br>";
+            document.getElementById("demo2").innerHTML=
+            "The Float value : "+parseFloat(f2)+"<br>";
+        }
+    </script>
+    <button onclick="change()">Convert</button>
+
+
+</body>
+
+</html>

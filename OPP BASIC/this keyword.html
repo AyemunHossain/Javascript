@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p id ="demo">Full Name :</p>
+    <p id ="demo1">....</p>
+    <script>
+        var person = {
+            firstName: "Ayemun",
+            lastName: "Hossain",
+            fullName: function () {
+                return this.firstName+ " "+this.lastName;
+            }
+        }
+
+        function find() {
+            document.getElementById("demo1").innerHTML=
+            person.fullName();
+
+        }
+    </script>
+    <button onclick="find()"> Show  </button>
+
+</body>
+
+</html>

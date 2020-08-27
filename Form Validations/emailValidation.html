@@ -1,0 +1,27 @@
+<html>
+
+  <body>
+  <script>
+
+    function fun() {
+      var v_email = document.login.email.value;
+
+      var at = v_email.indexOf("@");
+      var dot = v_email.lastIndexOf(".");
+
+      if(at < 1 || at+2>dot || dot+2>v_email.length){
+        alert("Please Enter a Valid email");
+        return false;
+      }
+    }
+  </script>
+  <form name="login" method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return fun()">
+    <table>
+      <tr> <td>Email : </td><td><input type="text" name="email"></td></tr>
+      <tr> <td colspan="2"><input type="submit" name="submit"></td></tr>
+    </table>
+  </form>
+
+
+  </body>
+</html>

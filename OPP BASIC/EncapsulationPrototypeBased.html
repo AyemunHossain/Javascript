@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id ="demo">Student Information </p>
+    <p id ="demo1">.............</p>
+    <script>
+         function test(name,id) {
+             var st_name = name;
+             var st_id = id;
+             Object.defineProperty(this,"name",{
+                 get:function () {
+                     return st_name;
+
+                 },
+                 set:function(st_name){
+                     this.st_name=st_name;
+                 }
+             });
+
+             Object.defineProperty(this,"id",{
+                 get:function () {
+                     return st_id;
+                 },
+                 set:function (st_id) {
+                     this.st_id=st_id;
+                 }
+             });
+         }
+         var obj1 = new test("Rami",2223);
+         document.getElementById("demo1").innerHTML=
+             "<br>Student Name: "+obj1.name+"<br>Student ID: "+obj1.id;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<h2>From January 27 1999 to Today</h2>
+<body>
+    <p id ="demo"></p>
+    <p id ="demo1">....</p>
+    <script>
+        function change(){
+            document.getElementById("demo1").innerHTML = Date.parse(" January 27 1999 06:12:00")+" miliseconds";
+        }
+    </script>
+    <button onclick="change()"> Calculate </button>
+
+</body>
+
+</html>

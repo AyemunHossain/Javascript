@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script>
+'use strict';
+
+let recipeMap = new Map([
+  ['cucumber', 500],
+  ['tomatoes', 350],
+  ['onion',    50]
+]);
+
+
+
+var recipeObj =  Object.fromEntries(recipeMap.entries());
+
+// you can do this ...both works same but diffrect ways
+// var recipeObj =  Object.fromEntries(recipeMap);
+alert(recipeObj.cucumber);
+</script>
