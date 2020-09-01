@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .user{
+            display: flex;
+            background: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        .user ul{
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="btn-2">
+        Get Users
+    </button>
+
+    <p id="users">
+        users:
+
+    </p>
+
+    <script>
+    
+        document.getElementById("btn-2").addEventListener("click", getusers);
+
+        function getusers() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", 'https://api.github.com/users', true);
+
+            xhr.onload = function () {
+                if (this.status == 200){
+                    var output = "";
+                    var users = JSON.parse(this.responseText);
+                    for (user of users) {
+                        output += '<div class="user">' +
+                            '<img src="'+user.avatar_url +'" width="70" height="70">'+
+                            '<ul>'+
+                            '<li> ID:' + user.id + '</li>' +
+                            '<li> Username:' + user.login + '</li>' +
+                            '<li> Account Type:' + user.type + '</li>' +
+                            '</ul> </div>';
+                    }
+
+                    document.getElementById("users").innerHTML = output;
+                }
+            };
+
+            xhr.send();
+        }
+
+    </script>
+
+</body>
+
+</html>

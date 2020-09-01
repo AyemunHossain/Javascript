@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+    <button id="btn-2">
+        Get Php
+    </button>
+    <p id="text">
+        .....
+    </p>
+
+    <script>
+
+        document.getElementById("btn-2").addEventListener("click", getPhp);
+
+        function getPhp() {
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","demo.php",true);
+            
+            xhr.onload = function () {
+                if (this.status == 200){
+                    document.getElementById('text').innerHTML=this.responseText;
+
+                }
+            }
+            
+
+            xhr.send();
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="btn-1">
+        click me
+    </button>
+    <p id="text"></p>
+    <script>
+        document.getElementById("btn-1").addEventListener("click", loadtext);
+        function loadtext() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", 'simpdle.txt', true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    document.getElementById("text").innerHTML = this.responseText;
+                }
+                if (this.status == 404) {
+                    document.getElementById("text").innerHTML = "Not Found";
+                }
+            }
+
+
+
+
+
+            xhr.onerror = function () {
+                console.log("Request error ");
+            }
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>

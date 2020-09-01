@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button id="btn-1">
+            click me
+        </button>
+    <script>
+        document.getElementById("btn-1").addEventListener("click",loadtext);
+        function loadtext(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET",'simple.txt',true);
+
+            xhr.onload = function(){
+                if (this.status == 200){
+                    console.log(this.responseText);
+                }
+            }
+
+            xhr.send();
+        }
+    </script>
+    
+    </body>
+</html>

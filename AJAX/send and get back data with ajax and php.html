@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="btn-1">
+        click me
+    </button>
+    <p id="text"></p>
+    <script>
+        document.getElementById("btn-1").addEventListener("click", loadtext);
+        function loadtext() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", 'user.php?name=Ashik', true);
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    document.getElementById("text").innerHTML=this.responseText;
+                }
+            }
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>

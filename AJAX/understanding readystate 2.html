@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="btn-1">
+        click me
+    </button>
+    <script>
+        document.getElementById("btn-1").addEventListener("click", loadtext);
+        function loadtext() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", 'simple.txt', true);
+
+            xhr.onload = function(){
+                if (this.readyState == 2){
+                    console.log("I am ready to do something on state 2 ");
+                }
+                if (this.readyState == 3) {
+                    console.log("I am ready to do something on state 3 ");
+                }
+                if (this.readyState == 4) {
+                    console.log("I am ready to do something on state 4 ");
+                }
+                console.log(this.readyState);
+            }
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>

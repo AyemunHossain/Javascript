@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="btn-1">
+        click me
+    </button>
+    <script>
+        document.getElementById("btn-1").addEventListener("click", loadtext);
+        function loadtext() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", 'simple.txt', true);
+
+            xhr.onprogress = function () {  // this will only catch the progress state
+                
+                if (this.readyState == 3) {
+                    console.log("I am ready to do something on state 3 ");
+                }
+                
+                console.log(this.readyState);
+            }
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>

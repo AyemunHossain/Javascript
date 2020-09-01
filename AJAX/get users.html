@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="btn-1">
+        Get User
+    </button>
+    <button id="btn-2">
+        Get Users
+    </button>
+
+    <p id="user">
+        user name:
+
+    </p>
+    
+    <p id="users">
+        users:
+    
+    </p>
+
+    <script>
+        document.getElementById("btn-1").addEventListener("click", getuser);
+        document.getElementById("btn-2").addEventListener("click", getusers);
+
+        function getuser() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", 'user.json', true);
+
+            xhr.onload = function () {
+                if (this.status == 200){
+                    var user = JSON.parse(this.responseText);
+                    document.getElementById("user").innerHTML = user.name;
+                }
+            };
+
+            xhr.send();
+        }
+
+        function getusers() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", 'users.json', true);
+
+                xhr.onload = function () {
+                    if (this.status == 200){
+                        var output = "";
+                        var users = JSON.parse(this.responseText);
+                        for (user of users) {
+                            output += '<ul>' +
+                                
+                                '<li> ID:' + user.id + '</li>' +
+                                '<li> NAME:' + user.name + '</li>' +
+                                '<li> EMAIL:' + user.email + '</li>' +
+                                '</ul>';
+                        }
+
+                        document.getElementById("users").innerHTML = output;
+                    }
+                };
+
+                xhr.send();
+            }
+
+    </script>
+
+</body>
+
+</html>
