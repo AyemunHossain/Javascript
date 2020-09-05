@@ -1,4 +1,4 @@
-console.log(myFunction(4, 3))                           // you can call funtion before assigning function :)
+console.log(myFunction(4, 3));                           // you can call funtion before assigning function :)
 
 
 function myFunction(a, b) {

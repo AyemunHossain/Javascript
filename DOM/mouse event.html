@@ -1,0 +1,40 @@
+<html>
+
+<body>
+
+    <p id="b2" style="background: #ff4b30;">
+        Come here
+    <p>
+
+    <script>
+        var obj = document.getElementById("b2");
+        obj.addEventListener("mouseover",over);
+        obj.addEventListener("mouseup",up);
+        obj.addEventListener("mouseleave", leave);
+        obj.addEventListener("mousedown", down);
+        
+        function over(){
+            obj.style.backgroundColor = "#dea299";
+            obj.innerHTML = "Leave me alone";
+        }
+
+        function leave(){
+            obj.style.backgroundColor = "#a83c32";
+            obj.innerHTML = "Thanks";
+        }
+
+        function up(){
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "You Clicked me";
+        }
+
+        function down(){
+            obj.style.backgroundColor = "#a83c32";
+            obj.innerHTML = "No";
+        }
+
+    </script>
+
+</body>
+
+</html>

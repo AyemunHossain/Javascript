@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1  id="b1">
+            Hello Backbenchers :)
+        </h1>
+        <p>
+            In this code we will catch the b1 nodes first childs value and set the exact same value in b2 :)
+        </p>
+        <button onclick="doit()">
+            DO IT
+        </button>
+        <p id="b2">
+
+        </p>
+
+        <script>
+            function doit(){
+                document.getElementById("b2").innerHTML = document.getElementById("b1").childNodes[0].nodeValue;
+            }
+        </script>
+    </body>
+</html>

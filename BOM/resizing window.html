@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body id style="background: #10cca3;">
+
+    <p id="demo" style="font-size: xx-large;"></p>
+    <button onclick="create()">Create A window</button>
+    <button onclick="resize()">Resize</button>
+    <script>
+        var mywin;
+        function create() {
+            mywin = window.open("", "_blank ", "width=400, height=600");
+        }
+        function resize() {
+            mywin.resizeTo(window.screen.availWidth / 2,
+                window.screen.availHeight);
+            mywin.focus();
+        }
+    </script>
+
+</body>
+
+</html>

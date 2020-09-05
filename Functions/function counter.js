@@ -1,7 +1,7 @@
 function sayHi() {
     sayHi.counter++;
 }
-sayHi.counter = 0; 
+sayHi.counter = 0; //you have to initialize this on this section ono inside function :)
 
 sayHi();
 sayHi();

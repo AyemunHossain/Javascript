@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+   <div id="d1">
+        <p1>
+            .
+        </p1>
+        <h1>
+            .
+        </h1>
+        <h2>
+            .
+        </h2>
+        <h3>
+            .
+        </h3>
+        <h4>
+            .
+        </h4>
+        
+   </div>
+   <button onclick="doit()">
+        Do it
+   </button>
+
+   <script>
+       function doit(){
+           var obj = document.getElementById("d1");
+
+            console.log(obj.nodeName);
+            console.log(obj.children);
+            
+           for (element of obj.childNodes){
+               console.log(element);
+           }
+       }
+   </script>
+</body>
+
+</html>

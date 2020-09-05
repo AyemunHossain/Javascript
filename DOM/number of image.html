@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Finding HTML Elements Using document.images</h2>
+
+    <img src="notpic.jpeg">
+    <img src="notpic2.jpeg">
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "Number of images: " + document.images.length;
+    </script>
+
+</body>
+
+</html>

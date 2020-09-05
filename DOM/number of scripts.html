@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Finding HTML Elements Using document.scripts</h2>
+
+    <p id="demo"></p>
+
+
+    <script>
+        function ashik() {
+            console.log("ashik");
+        }
+    </script>
+    <script>
+        function ashik() {
+            console.log("ashik");
+        }
+    </script>
+    <script>
+        function ashik() {
+            console.log("ashik");
+        }
+        document.getElementById("demo").innerHTML =
+            "Number of scripts: " + document.scripts.length;
+    </script>
+</body>
+
+</html>

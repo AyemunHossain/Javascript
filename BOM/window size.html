@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body id style="background: #10cca3;">
+
+    <p id="demo" style="font-size: xx-large;"></p>
+    <button onclick="action()" style="height: 200px; width: 300px;">Show Size</button>
+    <script>    
+        function action() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            var x = document.getElementById("demo");
+            x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Finding HTML Elements Using document.forms</h2>
+
+    <form action="">
+        First name: <input type="text" name="fname" value="Donald">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "Number of forms: " + document.forms.length;
+    </script>
+
+</body>
+
+</html>
