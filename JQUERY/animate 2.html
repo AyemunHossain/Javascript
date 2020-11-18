@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");  
+    div.animate({
+    	left: '100px',
+      	height: '200px',
+      	width: '200px',}, "slow");
+
+    $("p").animate({fontSize: '3em'}, "slow");
+  });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">
+	<p>
+		HELLO
+	</p>
+</div>
+
+</body>
+</html>

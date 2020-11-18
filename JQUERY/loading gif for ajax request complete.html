@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#txt").load("https://www.w3schools.com/jquery/demo_ajax_load.asp");
+		});
+
+		$(document).ajaxStart(function(){
+			$("#wait").css("display","block");
+		});
+
+		$(document).ajaxComplete(function(){
+			$("#wait").css("display","none");
+		});
+	});
+
+</script>
+</head>
+<body>
+
+<div id="txt"><h2>Let AJAX change this text</h2></div>
+
+<button style="height: 30px;width:200px;">Change Content</button>
+
+<div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='demo_wait.gif' width="70" height="70" /><br>Loading..</div>
+
+</body>
+</html>
